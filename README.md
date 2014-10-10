@@ -57,7 +57,7 @@ g_log = SNLog.info("<message>") as SNLog
 g_log = SNLog.error("<message>") as SNLog
 ```
 
-### Need to return Void from a function after logging?
+### Need to return Void from a closure after logging?
 
 ```
 SNLog.info("<message>")

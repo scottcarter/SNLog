@@ -35,8 +35,8 @@ var g_fixme: SNLog.Fixme?
 // SNLog.error("<message>")
 //
 // Note:
-// In a function that returns Void, a call to SNLog.[log|info|error] (which returns AnyObject) cannot
-// be last statement. If you need to return Void, try something like:
+// In a closure that returns Void, a call to SNLog.[log|info|error] (which returns AnyObject) cannot
+// be the last statement. If you need to return Void, try something like:
 //
 // SNLog.info("<message>")
 // Void()
@@ -49,9 +49,7 @@ var g_log: SNLog?
 
 class SNLog {
     
-    
     class Fixme { }
-    
     
     // The log() method calls display() with no prefix
     class func log (message: String, filePath: String = __FILE__, function: String = __FUNCTION__,  line: Int32 = __LINE__) -> AnyObject {
@@ -67,8 +65,6 @@ class SNLog {
     class func error (message: String, filePath: String = __FILE__, function: String = __FUNCTION__,  line: Int32 = __LINE__) -> AnyObject {
         return display("ERROR: ", message: message, filePath: filePath, function: function, line: line)
     }
-    
-    
 
     private class func display (prefix: String, message: String, filePath: String, function: String,  line: Int32) -> AnyObject {
         let file: String = filePath.lastPathComponent
@@ -78,18 +74,5 @@ class SNLog {
         return SNLog()
     }
     
-    
-    
-    
 }
-
-
-
-
-
-
-
-
-
-
 
