@@ -13,7 +13,7 @@ Unfortunately Swift does not support general preprocessing of the code, so pragm
 in Swift.
 
 SNLog provides an alternative by making use of a benign warning:
-"Treating a forced downcast to '<custom class>' as optional will never produce 'nil'"
+"Treating a forced downcast to '`<custom class>`' as optional will never produce 'nil'"
 
 ## Screenshot
 
